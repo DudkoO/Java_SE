@@ -1,5 +1,6 @@
 package com.company;
 
+
 import java.net.Socket;
 import java.util.Random; // подключение генератора рандомных чисел
 import java.util.Scanner; // подключение ввода
@@ -43,6 +44,7 @@ public class Main {
             System.out.println("14.Книга.");
             System.out.println("==========Наследование==========");
             System.out.println("15.Ученики.");
+            System.out.println("16.Средство передвижения.");
             System.out.println("---------------------------------------------------------------------------------------");
 
             do {
@@ -125,6 +127,9 @@ public class Main {
                      */
                     Nasledovanie();
                     break;
+                } else if (section == 16) {
+                    vehicle();
+                    break;
                 }
                 System.out.println("Неверно указанное действие.");
             }
@@ -146,6 +151,33 @@ public class Main {
 
         }
         System.out.println();
+    }
+
+    private static void vehicle() {
+        /*
+            Создать класс Vehicle. В теле класса создайте поля: координаты и параметры средств передвижения (цена, скорость, год выпуска).
+            Создайте 3 производных класса Plane, Саг и Ship. Для класса Plane должна быть определена высота и количество пассажиров.
+             Для класса Ship — количество пассажиров и порт приписки. Написать программу, которая выводит на экран информацию о каждом средстве
+            передвижения.
+
+         */
+        System.out.println("Создать класс Vehicle. В теле класса создайте поля: координаты и параметры средств передвижения (цена, скорость, год выпуска).\n" +
+                " Создайте 3 производных класса Plane, Саг и Ship. Для класса Plane должна быть определена высота и количество пассажиров.\n" +
+                " Для класса Ship — количество пассажиров и порт приписки. Написать программу, которая выводит на экран информацию о каждом средстве\n" +
+                " передвижения.");
+
+        Plane plan1 = new Plane();
+        Plane plan2 = new Plane();
+        Ship ship1 = new Ship();
+        /*
+        тут могло біть заполнение полей, с помощью методов доступа,
+        но человек-существо ленивое.
+        */
+        plan1.getInfoPlane(plan1);
+        plan2.getInfoPlane(plan2);
+        ship1.getInfoShip(ship1);
+
+
     }
 
     private static void Book() {
@@ -549,6 +581,10 @@ public class Main {
                 System.out.println();
         }
         System.out.println();
+
+
+
+
 
         int counter = 0;
         int maxSequence = 0;
